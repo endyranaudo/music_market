@@ -1,38 +1,38 @@
 class RentalsController < ApplicationController
 
   def index
-    @sales = Sale.all
+    @sales = Rental.all
   end
 
   def new
-    @sale = Sale.new
+    @rental = Rental.new
   end
 
   def show
-    @sale = Sale.find(params[:id])
+    @rental = Rental.find(params[:id])
   end
 
   def create
-    @sale = Sale.new(sale_params)
-    @sale.save
-    redirect_to sale_path(@sale)
+    @rental = Rental.new(rental_params)
+    @rental.save
+    redirect_to rental_path(@rental)
   end
 
   def edit
-    @sale = Sale.find(params[:id])
+    @rental = Rental.find(params[:id])
   end
 
   def update
-    @sale = Sale.find(params[:id])
+    @rental = Rental.find(params[:id])
     # byebug
-    @sale.update(sale_params)
-    redirect_to sale_path
+    @rental.update(rental_params)
+    redirect_to rental_path
   end
 
   private
   
-  def sale_params
-    params.require(:sale).permit!
+  def rental_params
+    params.require(:rental).permit!
   end
 
 end

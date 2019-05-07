@@ -1,0 +1,20 @@
+<h1><%= @rental.title %></h1>
+
+<h3>Description:</h3>
+<p><%= @rental.description %></p>
+<h3>Picture:</h3>
+<p><%= @rental.photo_url %></p>
+<h3>Rental Availability:</h3>
+<p><%= @rental.rental_availability %></p>
+<h3>Price:</h3>
+<p>$ <%= @rental.price.round(2) %></p>
+
+<%# NEED TO SHOW THE USERNAME, NOT JUST THE USER_ID %>
+<h3>Posted by:</h3>
+
+<p><%= link_to @rental.user.username, user_path %></p>
+
+
+<p><%= link_to "Edit", edit_rental_path %></p>
+
+<p><%= link_to "Back to listings", rental_path %></p>

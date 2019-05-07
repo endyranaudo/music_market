@@ -8,8 +8,8 @@
 <p><%= @sale.price %></p>
 
 <%# NEED TO SHOW THE USERNAME, NOT JUST THE USER_ID %>
-<h3>Posted by: <%= @sale.user_id %></h3>
-
+<h3>Posted by:</h3>
+<p><%= link_to @sale.user.username, user_path %></p>
 
 <p><%= link_to "Edit", edit_sale_path %></p>
 

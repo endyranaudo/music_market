@@ -1,0 +1,10 @@
+<h2>Renting</h2>
+
+<ul>
+  <% @rentals.each do |rental| %>
+    <li>
+      <%= link_to rental.title, renatal_path(rental) %>
+    </li>
+    <br>
+  <% end %>
+</ul>

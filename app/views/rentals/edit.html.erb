@@ -1,0 +1,44 @@
+<h1>Edit AD</h1>
+
+<%= form_for @rental do |f| %>
+
+  <% if flash[:errors] %>
+  <%   flash[:errors].each do |message| %>
+  <%= message %>
+  <% end %>
+  <% end %>
+
+  <p>
+    <%= f.label :title %> <br/>
+    <%= f.text_field :title %>
+  </p>
+  <p>
+    <%= f.label :description %> <br/>
+    <%= f.text_area :description %>
+  </p>
+  <p>
+    <%= f.label :photo_url %> <br/>
+    <%= f.text_field :photo_url %>
+  </p>
+  <p>
+    <%= f.label :rental_availability %> <br/>
+    <%= f.date_field :rental_availability %>
+  </p>
+  <p>
+    <%= f.label :price %> <br/>
+    <%= f.text_field :price %>
+  </p>
+  <p>
+    <%= f.label :user_id %> <br/>
+    <%= f.text_field :user_id %>
+  </p>
+
+  <p>
+    <%= f.submit "SAVE EDIT" %>
+  </p>
+
+  <p><%= link_to "BACK", rental_path(@rental) %></p>
+
+  <p><%= %></p>
+
+<% end %>

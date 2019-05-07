@@ -3,7 +3,9 @@
 <ul>
   <% @sales.each do |sale| %>
     <li>
+      <div>
       <%= link_to sale.title, sale_path(sale) %>
+      </div>
     </li>
     <br>
   <% end %>
