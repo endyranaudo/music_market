@@ -1,29 +1,20 @@
 class SalesController < ApplicationController
-
   def index
-    @sales = sale.all
+    @sales = Sale.all
   end
 
   def new
-  end
-
-  def create
-
+    @sale = Sale.new
   end
 
   def show
-
+    @sale = Sale.find(params[:id])
   end
 
-  def edit
-
+  def create
+    @sale = Sale.new(sale_params)
+    @sale.save
+    redirect_to sale_path(@sale)
   end
-
-  def update
-  end
-
-  private
-
-  def 
-  end
+  
 end

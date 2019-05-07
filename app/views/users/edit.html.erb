@@ -1,0 +1,36 @@
+<h1>Edit User Profile</h1>
+
+<%= form_for @user do |f| %>
+
+  <% if flash[:errors] %>
+  <%   flash[:errors].each do |message| %>
+  <%= message %>
+  <% end %>
+  <% end %>
+
+  <p>
+    <%= f.label :username %> <br/>
+    <%= f.text_field :username %>
+  </p>
+  <p>
+    <%= f.label :first_name %> <br/>
+    <%= f.text_field :first_name %>
+  </p>
+  <p>
+    <%= f.label :last_name %> <br/>
+    <%= f.text_field :last_name %>
+  </p>
+  <p>
+    <%= f.label :email %> <br/>
+    <%= f.text_field :email %>
+  </p>
+
+  <p>
+    <%= f.submit "Edit Profile" %>
+  </p>
+
+  <p><%= link_to "Back", user_path(@user) %></p>
+
+  <p><%= %></p>
+
+<% end %>
