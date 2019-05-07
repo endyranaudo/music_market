@@ -16,5 +16,22 @@ class SalesController < ApplicationController
     @sale.save
     redirect_to sale_path(@sale)
   end
+
+  def edit
+    @sale = Sale.find(params[:id])
+  end
+
+  def update
+    @sale = Sale.find(params[:id])
+    # byebug
+    @sale.update(sale_params)
+    redirect_to sale_path
+  end
+
+  private
   
+  def sale_params
+    params.require(:sale).permit!
+  end
+
 end
