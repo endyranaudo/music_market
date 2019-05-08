@@ -10,7 +10,12 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2019_05_07_111214) do
+ActiveRecord::Schema.define(version: 2019_05_08_114944) do
+
+  create_table "rent_contracts", force: :cascade do |t|
+    t.integer "user_id"
+    t.integer "rental_id"
+  end
 
   create_table "rentals", force: :cascade do |t|
     t.string "title"
@@ -18,7 +23,11 @@ ActiveRecord::Schema.define(version: 2019_05_07_111214) do
     t.string "photo_url"
     t.integer "rental_availability"
     t.float "price"
+  end
+
+  create_table "sale_contracts", force: :cascade do |t|
     t.integer "user_id"
+    t.integer "sale_id"
   end
 
   create_table "sales", force: :cascade do |t|
@@ -26,7 +35,6 @@ ActiveRecord::Schema.define(version: 2019_05_07_111214) do
     t.text "description"
     t.string "photo_url"
     t.float "price"
-    t.integer "user_id"
   end
 
   create_table "users", force: :cascade do |t|

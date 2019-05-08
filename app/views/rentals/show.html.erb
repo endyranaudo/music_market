@@ -9,16 +9,12 @@
 <h3>Price:</h3>
 <p>$ <%= @rental.price.round(2) %></p>
 
-<%# NEED TO SHOW THE USERNAME, NOT JUST THE USER_ID %>
-<h3>Posted by:</h3>
+<%# NEED TO SHOW THE USERNAME OF WHO CREATE THE AD %>
+<%# <h3>Posted by:</h3> %>
 
 
-<p><%= link_to @rental.user.username, user_path %></p>
-
-
-
-<div class="btn btn-primary">
-  <%= link_to "Edit", edit_rental_path, :class => "btn" %>
+<div class="btn btn-warning">
+  <%= link_to "RENT IT NOW", rental_path, :class => "btn" %>
 </div>
 
 

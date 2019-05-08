@@ -3,7 +3,7 @@
 <ul>
   <% @rentals.each do |rental| %>
     <li>
-      <%= link_to rental.title, renatal_path(rental) %>
+      <%= link_to rental.title, rental_path(rental) %>
     </li>
     <br>
   <% end %>

@@ -24,7 +24,6 @@ class RentalsController < ApplicationController
 
   def update
     @rental = Rental.find(params[:id])
-    # byebug
     @rental.update(rental_params)
     redirect_to rental_path
   end

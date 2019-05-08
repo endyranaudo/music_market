@@ -14,6 +14,7 @@ class SalesController < ApplicationController
   def create
     @sale = Sale.new(sale_params)
     @sale.save
+
     redirect_to sale_path(@sale)
   end
 
@@ -23,7 +24,6 @@ class SalesController < ApplicationController
 
   def update
     @sale = Sale.find(params[:id])
-    # byebug
     @sale.update(sale_params)
     redirect_to sale_path
   end

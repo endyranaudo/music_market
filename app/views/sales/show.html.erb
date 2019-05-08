@@ -7,13 +7,15 @@
 <h3>Price:</h3>
 <p><%= @sale.price %></p>
 
-<h3>Posted by:</h3>
-<p><%= link_to @sale.user.username, user_path %></p>
+<%# NEED TO SHOW THE USERNAME OF WHO CREATE THE AD %>
+<%# <h3>Posted by:</h3> %>
 
-<div class="btn btn-primary">
-  <%= link_to "Edit", edit_sale_path, :class => "btn" %>
+<div class="btn btn-warning">
+  <%= link_to "BUY IT NOW", sales_path, :class => "btn" %>
 </div>
 
 <div class="btn btn-light">
   <%= link_to "Back to listings", sales_path, :class => "btn" %>
 </div>
+
+<%# @sale.user.username , user_path(@sale.user.id)%>

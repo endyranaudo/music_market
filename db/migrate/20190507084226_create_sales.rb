@@ -5,7 +5,6 @@ class CreateSales < ActiveRecord::Migration[5.2]
       t.text :description
       t.string :photo_url
       t.float :price
-      t.integer :user_id
     end
   end
 end
