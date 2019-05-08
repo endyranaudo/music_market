@@ -1,2 +1,32 @@
+<nav class="navbar navbar-dark bg-primary">
+  <!-- Navbar content -->
+    <form action="/action_page.php">
+      <input type="text" placeholder="Username" name="username">
+      <input type="text" placeholder="Password" name="password">
+      <button type="submit">Login</button>
+    </form>
+  </div>
+</nav>
+
 <h1>Welcome to</h1>
 <h2>Music Market</h2>
+
+<h3>What are you looking for today?</h3>
+<br>
+<div class="btn btn-primary">
+  <%= link_to "Create a SALE AD", new_sale_path, :class => "btn" %>
+</div>
+<div class="btn btn-warning">
+  <%= link_to "Create a RENT AD", new_rental_path, :class => "btn" %>
+</div>
+<div class="btn btn-primary">
+  <%= link_to "Buy an instrument", sales_path, :class => "btn" %>
+</div>
+<div class="btn btn-warning">
+  <%= link_to "Hire an instrument", rentals_path, :class => "btn" %>
+</div>
+
+
+ 
+  
+  

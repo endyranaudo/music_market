@@ -1,7 +1,7 @@
 class RentalsController < ApplicationController
 
   def index
-    @sales = Rental.all
+    @rentals = Rental.all
   end
 
   def new

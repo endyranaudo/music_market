@@ -32,7 +32,7 @@ class UsersController < ApplicationController
   def delete
     @user = User.find(params[:id])
     @user.delete
-    redirect_to user_path
+    redirect_to "root"
   end
 
   private

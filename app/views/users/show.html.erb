@@ -4,6 +4,16 @@
 <h3>Last name: <%= @user.last_name %></h3>
 <h3>email: <%= @user.email %></h3>
 
-<p><%= link_to "Edit", edit_user_path %></p>
+<div class="btn btn-primary">
+  <%= link_to "Edit", edit_user_path, :class => "btn" %>
+</div>
 
-<p><%= link_to "Back", user_path %></p>
+<%# ADD DELETE FUNCTION %>
+<div class="btn btn-danger">
+  <%= link_to "Delete", edit_user_path, :class => "btn" %>
+</div>
+
+<br>
+<div class="btn btn-light">
+  <%= link_to "Back", user_path, :class => "btn" %>
+</div>

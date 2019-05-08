@@ -33,12 +33,14 @@
     <%= f.text_field :user_id %>
   </p>
 
-  <p>
-    <%= f.submit "SAVE EDIT" %>
-  </p>
 
-  <p><%= link_to "BACK", rental_path(@rental) %></p>
+  <div class="btn btn-primary">
+    <%= f.submit "Edit Profile", :class => "btn" %>
+  </div>
 
-  <p><%= %></p>
+
+  <div class="btn btn-light">
+    <%= link_to "BACK", rental_path(@rental), :class => "btn" %>
+  </div>
 
 <% end %>

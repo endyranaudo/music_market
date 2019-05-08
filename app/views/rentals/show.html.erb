@@ -12,9 +12,16 @@
 <%# NEED TO SHOW THE USERNAME, NOT JUST THE USER_ID %>
 <h3>Posted by:</h3>
 
+
 <p><%= link_to @rental.user.username, user_path %></p>
 
 
-<p><%= link_to "Edit", edit_rental_path %></p>
 
-<p><%= link_to "Back to listings", rental_path %></p>
+<div class="btn btn-primary">
+  <%= link_to "Edit", edit_rental_path, :class => "btn" %>
+</div>
+
+
+<div class="btn btn-light">
+  <%= link_to "Back to listings", rental_path, :class => "btn" %>
+</div>

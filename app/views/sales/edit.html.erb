@@ -32,9 +32,9 @@
   <p>
     <%= f.submit "SAVE EDIT" %>
   </p>
-
-  <p><%= link_to "BACK", sale_path(@sale) %></p>
-
-  <p><%= %></p>
+  
+  <div class="btn btn-primary">
+    <%= link_to "BACK", sale_path(@sale), :class => "btn" %>
+  </div>
 
 <% end %>

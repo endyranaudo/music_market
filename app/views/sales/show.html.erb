@@ -7,10 +7,13 @@
 <h3>Price:</h3>
 <p><%= @sale.price %></p>
 
-<%# NEED TO SHOW THE USERNAME, NOT JUST THE USER_ID %>
 <h3>Posted by:</h3>
 <p><%= link_to @sale.user.username, user_path %></p>
 
-<p><%= link_to "Edit", edit_sale_path %></p>
+<div class="btn btn-primary">
+  <%= link_to "Edit", edit_sale_path, :class => "btn" %>
+</div>
 
-<p><%= link_to "Back to listings", sales_path %></p>
+<div class="btn btn-light">
+  <%= link_to "Back to listings", sales_path, :class => "btn" %>
+</div>
