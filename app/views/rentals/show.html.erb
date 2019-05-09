@@ -4,7 +4,7 @@
 <p><%= @rental.description %></p>
 
 <h3>Picture:</h3>
-<img src="<%= @rental.photo_url %>" alt="ad_picture" height=“100" width=“150”>
+<img class="product_image" src="<%= @rental.photo_url %>" alt="ad_picture" height=“100" width=“150”>
 
 <h3>Rental Availability:</h3>
 <p><%= @rental.rental_availability %></p>
@@ -12,18 +12,18 @@
 <p>$ <%= @rental.price %></p>
 
 <%# NEED TO SHOW THE USERNAME OF WHO CREATE THE AD %>
-<%# <h3>Posted by:</h3> %>
+<h4>Posted by:</h4>
+<%= link_to @rental.owner.username %>
+<h4>Contact the seller:</h4>
+<%= mail_to @rental.owner.email %>
+<br>
 
 
-<div class="btn btn-warning btn-sm">
-  <%= link_to "RENT IT NOW", rental_path, :class => "btn" %>
-</div>
+<div class="btn btn-warning btn-sm btn_spacing">
+    <%= link_to "EDIT AD", edit_rental_path, :class => "btn" %>
+  </div>
+<br>
 
-<div class="btn btn-light btn-sm">
-  <%= link_to "Edit", edit_rental_path, :class => "btn" %>
-</div>
-
-
-<div class="btn btn-light btn-sm">
-  <%= link_to "Back to listings", rental_path, :class => "btn" %>
+<div class="btn btn-light btn-sm btn_spacing">
+  <%= link_to "Back to listings", rentals_path, :class => "btn" %>
 </div>

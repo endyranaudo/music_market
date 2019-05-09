@@ -1,23 +1,26 @@
 <h1>Selling</h1>
 <h3><%= @sale.title %></h3>
 
-<h3>Description:</h3>
+<h4>Description:</h4>
 <p><%= @sale.description %></p>
 <%# <h3>Picture:</h3> %>
-<img src="<%= @sale.photo_url %>" alt="ad_picture" height=“100" width=“150”>
+<img class="product_image" src="<%= @sale.photo_url %>" alt="ad_picture">
 
-<h3>Price:</h3>
+<h4>Price:</h4>
 <p><%= @sale.price %></p>
 
 <%# NEED TO SHOW THE USERNAME OF WHO CREATE THE AD %>
-<h3>Posted by:</h3>
+<h4>Posted by:</h4>
+<%= link_to @sale.owner.username %>
+<h4>Contact the seller:</h4>
+<%= mail_to @sale.owner.email %>
+<br>
 
-<div class="btn btn-warning btn-sm">
-  <%= link_to "CONTACT THE SELLER", sales_path, :class => "btn" %>
-</div>
+<div class="btn btn-warning btn-sm btn_spacing">
+    <%= link_to "EDIT AD", edit_sale_path, :class => "btn" %>
+  </div>
+<br>
 
-<div class="btn btn-light btn-sm">
+<div class="btn btn-light btn-sm btn_spacing">
   <%= link_to "Back to listings", sales_path, :class => "btn" %>
 </div>
-
-<%# @sale.user.username , user_path(@sale.user.id)%>

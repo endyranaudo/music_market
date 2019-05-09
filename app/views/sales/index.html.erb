@@ -1,12 +1,12 @@
 <h2>Selling</h2>
 
-<ul>
+<ul class="listings">
   <% @sales.each do |sale| %>
     <li class="jumbotron">
       <div>
         <%= link_to sale.title, sale_path(sale) %> <br>
         <%= sale.description %> <br>
-        <div class="btn btn-outline-primary btn-sm">
+        <div class="btn btn-outline-primary btn-sm btn_spacing">
           <%= link_to "See AD", sale_path(sale), :class => "btn" %>
         </div>
       </div>

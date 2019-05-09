@@ -33,18 +33,22 @@
   </p>
 
 
-  <div class="btn btn-primary btn-sm">
+  <div class="btn btn-primary btn-sm btn_spacing">
     <%= f.submit "SAVE EDITS", :class => "btn" %>
   </div>
+  <br>
 
 
-  <div class="btn btn-light btn-sm">
+  <div class="btn btn-light btn-sm btn_spacing">
     <%= link_to "BACK", rental_path(@rental), :class => "btn" %>
   </div>
   <br>
 
-  <div class="btn btn-outline-danger btn-sm">
-    <%= link_to "DELETE AD", rentals_path, :class => "btn" %>
-  </div>
 
 <% end %>
+
+<div class="btn btn-danger btn-sm btn_spacing">
+  <%= form_tag rental_path(@rental), method: "delete" do %>
+    <%= submit_tag "Delete #{@rental.title}", :class => "btn"%>
+  <% end %>
+</div>

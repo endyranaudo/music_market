@@ -1,6 +1,15 @@
 body {
   background-color: #fcfdff;
   list-style: none;
+  line-height: 1.5em;
+}
+
+.btn_spacing {
+  margin-top: 20px;
+}
+
+.container {
+  margin-bottom: 100px;
 }
 
 .banner {
@@ -26,8 +35,17 @@ body {
   margin-right: 16.5%;
 }
 
+.product_image{
+  max-height: 300px;
+}
+
 #menu {
   color: white;
+}
+
+.listings {
+  list-style-type: none;
+  margin-left: -40px;
 }
 
 #middle-row{

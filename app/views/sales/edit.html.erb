@@ -25,16 +25,25 @@
     <%= f.text_field :price %>
   </p>
   <p>
-    <%= f.label :user_id %> <br/>
-    <%= f.text_field :user_id %>
+    <%= f.collection_select :user_ids, User.all, :id, :username %>
   </p>
 
-  <p>
-    <%= f.submit "SAVE EDIT" %>
-  </p>
-  
-  <div class="btn btn-primary btn-sm">
+
+  <div class="btn btn-primary btn-sm btn_spacing">
+    <%= f.submit "SAVE EDITS", :class => "btn" %>
+  </div>
+  <br>
+
+
+  <div class="btn btn-light btn-sm btn_spacing">
     <%= link_to "BACK", sale_path(@sale), :class => "btn" %>
   </div>
+  <br>
 
 <% end %>
+
+<div class="btn btn-danger btn-sm btn_spacing">
+  <%= form_tag sale_path(@sale), method: "delete" do %>
+    <%= submit_tag "Delete #{@sale.title}", :class => "btn"%>
+  <% end %>
+</div>

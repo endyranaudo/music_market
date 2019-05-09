@@ -1,12 +1,12 @@
 <h2>Renting</h2>
 
-<ul>
+<ul class="listings">
   <% @rentals.each do |rental| %>
     <li class="jumbotron">
-      <div >
+      <div>
         <%= link_to rental.title, rental_path(rental) %> <br>
         <%= rental.description %> <br>
-        <div class="btn btn-outline-primary btn-sm">
+        <div class="btn btn-outline-primary btn-sm btn_spacing">
           <%= link_to "See AD", rental_path(rental), :class => "btn" %>
         </div>
       <div>
