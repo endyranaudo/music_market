@@ -1,0 +1,51 @@
+body {
+  background-color: #fcfdff;
+  list-style: none;
+}
+
+.banner {
+  margin: 40px 0;
+}
+
+.welcome-imgs{
+  height: 60%;
+  width: 80%;
+  margin: 10%;
+}
+
+#navbar {
+  padding-top: 50px;
+  padding-bottom: 10px;
+}
+
+#logo_small{
+  margin-left: 265px;
+}
+
+#login {
+  margin-right: 16.5%;
+}
+
+#menu {
+  color: white;
+}
+
+#middle-row{
+  padding-bottom: 100px;
+}
+
+#footer {
+  background-color: #353A3F;
+  color: #fcfdff;
+  height: 60px;
+  position: fixed;
+  bottom: 0px;
+  left: 0px;
+  right: 0px;
+  margin-bottom: 0px;
+}
+
+.footer_message {
+  margin-top: 30px;
+  margin-left: 265px;
+}

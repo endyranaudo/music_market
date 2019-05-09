@@ -2,9 +2,13 @@
 
 <ul>
   <% @sales.each do |sale| %>
-    <li>
+    <li class="jumbotron">
       <div>
-      <%= link_to sale.title, sale_path(sale) %>
+        <%= link_to sale.title, sale_path(sale) %> <br>
+        <%= sale.description %> <br>
+        <div class="btn btn-outline-primary btn-sm">
+          <%= link_to "See AD", sale_path(sale), :class => "btn" %>
+        </div>
       </div>
     </li>
     <br>

@@ -12,7 +12,7 @@
 
 ActiveRecord::Schema.define(version: 2019_05_08_114944) do
 
-  create_table "rent_contracts", force: :cascade do |t|
+  create_table "rental_contracts", force: :cascade do |t|
     t.integer "user_id"
     t.integer "rental_id"
   end

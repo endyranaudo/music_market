@@ -29,18 +29,22 @@
     <%= f.text_field :price %>
   </p>
   <p>
-    <%= f.label :user_id %> <br/>
-    <%= f.text_field :user_id %>
+    <%= f.collection_select :user_ids, User.all, :id, :username %>
   </p>
 
 
-  <div class="btn btn-primary">
-    <%= f.submit "Edit Profile", :class => "btn" %>
+  <div class="btn btn-primary btn-sm">
+    <%= f.submit "SAVE EDITS", :class => "btn" %>
   </div>
 
 
-  <div class="btn btn-light">
+  <div class="btn btn-light btn-sm">
     <%= link_to "BACK", rental_path(@rental), :class => "btn" %>
+  </div>
+  <br>
+
+  <div class="btn btn-outline-danger btn-sm">
+    <%= link_to "DELETE AD", rentals_path, :class => "btn" %>
   </div>
 
 <% end %>

@@ -1,5 +1,5 @@
 <h1>Post your AD</h1>
-<h3> rentals section </h3>
+<h3> You are in RENT section </h3>
 
 <%= form_for @rental do |f| %>
   
@@ -33,7 +33,7 @@
     <%= f.collection_select :user_ids, User.all, :id, :username %>
   </p>
 
-  <div class="btn btn-primary">
+  <div class="btn btn-primary btn-sm">
     <%= f.submit "Create AD", :class => "btn" %>
   </div>
 

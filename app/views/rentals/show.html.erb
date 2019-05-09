@@ -2,22 +2,28 @@
 
 <h3>Description:</h3>
 <p><%= @rental.description %></p>
+
 <h3>Picture:</h3>
-<p><%= @rental.photo_url %></p>
+<img src="<%= @rental.photo_url %>" alt="ad_picture" height=“100" width=“150”>
+
 <h3>Rental Availability:</h3>
 <p><%= @rental.rental_availability %></p>
 <h3>Price:</h3>
-<p>$ <%= @rental.price.round(2) %></p>
+<p>$ <%= @rental.price %></p>
 
 <%# NEED TO SHOW THE USERNAME OF WHO CREATE THE AD %>
 <%# <h3>Posted by:</h3> %>
 
 
-<div class="btn btn-warning">
+<div class="btn btn-warning btn-sm">
   <%= link_to "RENT IT NOW", rental_path, :class => "btn" %>
 </div>
 
+<div class="btn btn-light btn-sm">
+  <%= link_to "Edit", edit_rental_path, :class => "btn" %>
+</div>
 
-<div class="btn btn-light">
+
+<div class="btn btn-light btn-sm">
   <%= link_to "Back to listings", rental_path, :class => "btn" %>
 </div>

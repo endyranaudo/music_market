@@ -28,6 +28,12 @@ class RentalsController < ApplicationController
     redirect_to rental_path
   end
 
+  def delete
+    @rental = Rental.find(params[:id])
+    @rental.destroy
+    redirect_to rental_path
+  end
+
   private
   
   def rental_params

@@ -1,29 +1,44 @@
-<nav class="navbar navbar-dark bg-primary">
-  <!-- Navbar content -->
-    <form action="/action_page.php">
-      <input type="text" placeholder="Username" name="username">
-      <input type="text" placeholder="Password" name="password">
-      <button type="submit">Login</button>
-    </form>
-  </div>
-</nav>
+<h1>Music Market</h1>
+<h4>buy, sell or rent your musical instrument</h4>
 
-<h1>Welcome to</h1>
-<h2>Music Market</h2>
+<img class="banner"src="http://www.f-covers.com/cover/3dgraphics-musical-instrument-014730-facebook-cover-timeline-banner-for-fb.jpg" alt="music banner" style="width:100%" >
 
-<h3>What are you looking for today?</h3>
+<h4>Musik Market is the right place for:</h4>
 <br>
-<div class="btn btn-primary">
-  <%= link_to "Create a SALE AD", new_sale_path, :class => "btn" %>
-</div>
-<div class="btn btn-warning">
-  <%= link_to "Create a RENT AD", new_rental_path, :class => "btn" %>
-</div>
-<div class="btn btn-primary">
-  <%= link_to "Buy an instrument", sales_path, :class => "btn" %>
-</div>
-<div class="btn btn-warning">
-  <%= link_to "Hire an instrument", rentals_path, :class => "btn" %>
+<div id="middle-row"class="row">
+
+  <div class="col text-center ">
+    <%= image_tag("create_buy.jpg", class: "welcome-imgs", alt: "buy image") %>
+    <p> Want to change your music instrument? Post an AD </p>
+    <div class="btn btn-light">
+      <%= link_to "Create a SALE AD", new_sale_path, :class => "btn" %>
+    </div>
+  </div>
+
+  <div class="col text-center">
+    <%= image_tag("create_rent.jpg", class: "welcome-imgs", alt: "buy image") %>
+    <p> Want to rent your equipment? Create your AD </p>
+    <div class="btn btn-warning">
+      <%= link_to "Create a RENT AD", new_rental_path, :class => "btn" %>
+    </div>
+  </div>
+
+  <div class="col text-center">
+    <%= image_tag("buy.jpg", class: "welcome-imgs", alt: "buy image") %>
+    <p> Are you having a GAS attack? We might make you happy </p>
+    <div class="btn btn-light">
+      <%= link_to "Buy an instrument", sales_path, :class => "btn" %>
+    </div>
+  </div>
+
+  <div class="col text-center">
+    <%= image_tag("rent.jpg", class: "welcome-imgs", alt: "buy image") %>
+    <p> Check if we have what do you need for your gig! </p>
+    <div class="btn btn-warning">
+      <%= link_to "Hire an instrument", rentals_path, :class => "btn" %>
+    </div>
+  </div>
+
 </div>
 
 

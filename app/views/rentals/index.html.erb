@@ -2,8 +2,14 @@
 
 <ul>
   <% @rentals.each do |rental| %>
-    <li>
-      <%= link_to rental.title, rental_path(rental) %>
+    <li class="jumbotron">
+      <div >
+        <%= link_to rental.title, rental_path(rental) %> <br>
+        <%= rental.description %> <br>
+        <div class="btn btn-outline-primary btn-sm">
+          <%= link_to "See AD", rental_path(rental), :class => "btn" %>
+        </div>
+      <div>
     </li>
     <br>
   <% end %>

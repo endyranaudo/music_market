@@ -1,12 +1,15 @@
 <h1>Post your AD</h1>
-<h3> sales section </h3>
+<h3> You are in SALE section </h3>
 
 <%= form_for @sale do |f| %>
   
-  <% if flash[:errors] %>
-  <%   flash[:errors].each do |message| %>
-  <%= message %>
-  <% end %>
+  <% if @sale.errors.any? %> 
+	<h2>Errors:</h2>
+	<ul>
+		<% @sale.errors.full_messages.each do |message| %>
+		<li> <%= message %></li>
+	<% end %>
+	</ul>
   <% end %>
 
   <p>
@@ -26,9 +29,10 @@
     <%= f.text_field :price %>
   </p>
   <p>
-  <%= f.collection_select :user_ids, User.all, :id, :username %>
+    <%= f.collection_select :user_ids, User.all, :id, :username %>
   </p>
-  <div class="btn btn-primary">
+
+  <div class="btn btn-primary btn-sm">
     <%= f.submit "Create AD", :class => "btn" %>
   </div>
 
