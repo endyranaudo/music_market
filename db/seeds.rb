@@ -17,14 +17,19 @@ u2 = User.create(username: "GeorgeRunner", first_name: "George", last_name: "Bur
 u3 = User.create(username: "Mikey", first_name: "Mike", last_name: "Clay", email: "mikecl@gmail.com", password: "Password123" )
 u4 = User.create(username: "Paloma", first_name: "Paul", last_name: "Akhoma", email: "pakhoma@email.com", password: "Password123" )
 u5 = User.create(username: "Renegade", first_name: "Lorenzo", last_name: "Lamas", email: "indianlove@email.com", password: "Password123" )
+u6 = User.create(username: "Vaipè", first_name: "GIuseppe", last_name: "Rossi", email: "pepporossi@email.com", password: "Password123" )
+u7 = User.create(username: "CamiCami", first_name: "Camille", last_name: "Granai", email: "cgranai@email.com", password: "Password123" )
+u8 = User.create(username: "Bombastic", first_name: "Igor", last_name: "Vanelas", email: "bombastic@email.com", password: "Password123" )
 
 
 sale1 = Sale.create(title: "Fender Jaguar", description:"Fender Jaguar 1969 looking amazing!", photo_url:"https://d1aeri3ty3izns.cloudfront.net/media/37/372569/1200/preview.jpg", price:"1500")
 sale2 = Sale.create(title: "Ibanez JS1000", description:"Ibanez JS1000 in good conditions", photo_url:"https://pbs.twimg.com/media/DMzeuynVQAA8Oyn.jpg", price:"1200")
 sale3 = Sale.create(title: "Gibson SG", description:"Gibson SG red", photo_url:"https://media.sweetwater.com/api/i/q-82__ha-91b7bb8d72672382__hmac-cc630e36a7e9eb88afec29a6b23face817d1cdd5/images/items/750/SGS6119VENH-large.jpg", price:"3000")
-sale4 = Sale.create(title: "Martin D28", description:"Martin D28 vintage, good overall conditions", photo_url:"https://andertons-productimages.imgix.net/282556-1530186278494.png?w=680&h=680&fit=fill&bg=FFFFFF&auto=compress&auto=format", price:"75")
-sale5 = Sale.create(title: "Gibson SJ200", description:"Gibson SJ200. Home use only", photo_url:"https://media.sweetwater.com/api/i/q-82__ha-0c81edd6ad607a42__hmac-e9e6ac89871204ac8e6bad4e76f32e89b24160bd/images/items/750/SJ20VSG19-large.jpg", price:"85")
-
+sale4 = Sale.create(title: "Martin D28", description:"Martin D28 vintage, good overall conditions", photo_url:"https://andertons-productimages.imgix.net/282556-1530186278494.png?w=680&h=680&fit=fill&bg=FFFFFF&auto=compress&auto=format", price:"2000")
+sale5 = Sale.create(title: "Gibson SJ200", description:"Gibson SJ200. Home use only", photo_url:"https://images.reverb.com/image/upload/s--ILgnwfod--/f_auto,t_supersize/v1547750492/qf2fqrpyi4pkbhvejupm.jpg", price:"1800")
+sale6 = Sale.create(title: "Fender Telecaster", description:"Fender Telecaster. Never gigged. Mint condition", photo_url:"https://media.sweetwater.com/api/i/q-82__ha-0c81edd6ad607a42__hmac-e9e6ac89871204ac8e6bad4e76f32e89b24160bd/images/items/750/SJ20VSG19-large.jpg", price:"850")
+sale7 = Sale.create(title: "PRS Custom 22", description:"Selling or just renting my PRS Custom 22, amazing finish in violet/plum", photo_url:"https://cdn.shopify.com/s/files/1/0244/0329/products/PRS_Machinehead_Custom_22_Purple-3.jpg?v=1536360740", price:"85")
+sale8 = Sale.create(title: "Yamaha John Patitucci", description:"Selling or just renting Yamaha John Patitucci, original model from 1998. Amazing 6 strings in good condition", photo_url:"https://images.reverb.com/image/upload/s--4XW6khCo--/a_exif,c_limit,e_unsharp_mask:80,f_auto,fl_progressive,g_south,h_620,q_90,w_620/v1484535865/vywekxmeroppo0e8qha2.jpg", price:"1500")
 
 
 rental2 = Rental.create(title: "Fender Deluxe", description:"Fender Deluxe vintage, all original", photo_url:"https://media.sweetwater.com/images/items/750/65DeluxeRev-large.jpg?v=af1d6c5a0d50f7bf", rental_availability:"13/04/2019", price:"80")
@@ -32,8 +37,10 @@ rental3 = Rental.create(title: "Eden bass amp", description:"Eden bass amp with 
 rental4 = Rental.create(title: "Guitar Stand", description:"Guitar Stand Proel in aluminium", photo_url:"https://images-na.ssl-images-amazon.com/images/I/819lncuw6IL._SL1500_.jpg", rental_availability:"24/08/2019", price:"10")
 rental5 = Rental.create(title: "Strobe light", description:"Strobe light for your DJ sessions", photo_url:"https://images.samash.com/sa/ABI/ABIGSTLII-P.fpx?cvt=jpg", rental_availability:"26/08/2019", price:"20")
 rental6 = Rental.create(title: "Marshall Plexi", description:"Marshall Plexi - studio use only", photo_url:"https://c1.zzounds.com/media/productmedia/fit,2018by3200/quality,85/p35398g-f750c5e55acdf82a900812ccb31df435.jpg", rental_availability:"12/02/2019", price:"50")
+rental7 = Rental.create(title: "PRS Custom 22", description:"Selling or just renting my PRS Custom 22, amazing finish in violet/plum", photo_url:"https://cdn.shopify.com/s/files/1/0244/0329/products/PRS_Machinehead_Custom_22_Purple-3.jpg?v=1536360740", price:"85")
+rental8 = Rental.create(title: "Yamaha John Patitucci", description:"Selling or just renting Yamaha John Patitucci, original model from 1998. Amazing 6 strings in good condition", photo_url:"https://images.reverb.com/image/upload/s--4XW6khCo--/a_exif,c_limit,e_unsharp_mask:80,f_auto,fl_progressive,g_south,h_620,q_90,w_620/v1484535865/vywekxmeroppo0e8qha2.jpg", price:"1500")
 
-sale_contract1 = SaleContract.create(sale_id: 1, user_id: 2)
+sale_contract1 = SaleContract.create(sale_id: 2, user_id: 2)
 sale_contract2 = SaleContract.create(sale_id: 2, user_id: 3)
 sale_contract3 = SaleContract.create(sale_id: 3, user_id: 2)
 sale_contract4 = SaleContract.create(sale_id: 5, user_id: 1)

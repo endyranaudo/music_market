@@ -22,7 +22,7 @@ ActiveRecord::Schema.define(version: 2019_05_08_114944) do
     t.text "description"
     t.string "photo_url"
     t.integer "rental_availability"
-    t.float "price"
+    t.integer "price"
   end
 
   create_table "sale_contracts", force: :cascade do |t|
@@ -34,7 +34,7 @@ ActiveRecord::Schema.define(version: 2019_05_08_114944) do
     t.string "title"
     t.text "description"
     t.string "photo_url"
-    t.float "price"
+    t.integer "price"
   end
 
   create_table "users", force: :cascade do |t|

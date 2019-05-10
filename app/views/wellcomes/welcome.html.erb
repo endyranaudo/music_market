@@ -5,15 +5,26 @@
 
 <h4>Musik Market is the right place for:</h4>
 <%# COUNTER %>
-<p>Join us, we are <%= @total_users %> users, and we have <%= @total_ads %> ads!!!</p>
-
+<p>Join us, we are <strong><%= @total_users %></strong> users, and we have <strong><%= @total_ads %></strong> ads!!!</p>
 <br>
+<%# CREATE ACCOUNT %>
+<p class="btn btn-outline-primary btn-sm">
+  <%= link_to "Create an account", new_user_path, :class => "btn" %>
+</p>
+<br>
+<%# SEE ALL USERS %>
+<p class="btn btn-outline-warning btn-sm">
+  <%= link_to "See all Users", users_path, :class => "btn" %>
+</p>
+<br>
+
+
 <div id="middle-row" class="row">
 
   <div class="col text-center ">
     <%= image_tag("create_buy.jpg", class: "welcome-imgs", alt: "buy image") %>
     <p> Want to change your music instrument? Post an AD </p>
-    <div class="btn btn-light">
+    <div class="btn btn-outline-primary">
       <%= link_to "Create a SALE AD", new_sale_path, :class => "btn" %>
     </div>
   </div>
@@ -29,7 +40,7 @@
   <div class="col text-center">
     <%= image_tag("buy.jpg", class: "welcome-imgs", alt: "buy image") %>
     <p> Are you having a GAS attack? We might make you happy </p>
-    <div class="btn btn-light">
+    <div class="btn btn-outline-primary">
       <%= link_to "Buy an instrument", sales_path, :class => "btn" %>
     </div>
   </div>

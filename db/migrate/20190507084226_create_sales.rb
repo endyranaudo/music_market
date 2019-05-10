@@ -4,7 +4,7 @@ class CreateSales < ActiveRecord::Migration[5.2]
       t.string :title
       t.text :description
       t.string :photo_url
-      t.float :price
+      t.integer :price
     end
   end
 end

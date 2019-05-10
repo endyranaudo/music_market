@@ -13,7 +13,7 @@
 
 <%# NEED TO SHOW THE USERNAME OF WHO CREATE THE AD %>
 <h4>Posted by:</h4>
-<%= link_to @rental.owner.username %>
+<%= link_to @rental.owner.username , user_path(@rental.owner) %>
 <h4>Contact the seller:</h4>
 <%= mail_to @rental.owner.email %>
 <br>

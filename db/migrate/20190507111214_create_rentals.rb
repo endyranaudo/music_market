@@ -5,7 +5,7 @@ class CreateRentals < ActiveRecord::Migration[5.2]
       t.text :description
       t.string :photo_url
       t.integer :rental_availability
-      t.float :price
+      t.integer :price
     end
   end
 end
